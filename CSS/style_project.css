@@ -109,7 +109,7 @@
   display: flex;
   max-width: 120rem;
   padding: 1.6rem 3.2rem;
-  margin: 0 auto;
+  margin: 2.4rem auto;
   gap: 2.4rem;
   justify-content: center;
 }
@@ -143,4 +143,50 @@
 .btn:hover,
 .btn:active {
   color: #888;
+}
+/* ******************** */
+/* FOOTER */
+/* ******************** */
+
+.footer {
+  padding: 4.8rem 0;
+  border-top: 1px solid #eee;
+}
+
+.grid--footer {
+  grid-template-columns: 1fr 1fr 2fr;
+  justify-items: center;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: auto;
+}
+
+.contact-col {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
 }
