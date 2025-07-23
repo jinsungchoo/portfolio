@@ -13,15 +13,22 @@
   padding: 0 4.8rem;
 
   z-index: 100;
+
+  transition: all 0.3s ease; /* 부드러운 전환 */
+  backdrop-filter: none;
+  background-color: transparent;
 }
 .header-show {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.7);
   position: fixed;
   top: 0;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(10px);
 }
 .header-normal {
   position: absolute;
+  background-color: transparent;
+  backdrop-filter: none;
 }
 
 .logo {
