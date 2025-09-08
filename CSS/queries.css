@@ -56,6 +56,11 @@ Instead, 1rem = 1em = 16px */
     font-size: 56.25%;
   }
 
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 4.8rem;
+  }
+
   .hero {
     grid-template-columns: 1fr;
     padding: 0 8rem;
@@ -65,6 +70,7 @@ Instead, 1rem = 1em = 16px */
   .hero-description {
     text-align: center;
   }
+
   .container .about-box {
     grid-template-columns: 1fr;
   }
@@ -74,66 +80,80 @@ Instead, 1rem = 1em = 16px */
     height: 6rem;
   }
 
-  /* MOBILE NAVIGATION */
-  .btn-mobile-nav {
-    display: block;
-    z-index: 9999;
+  .grid--footer {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .main-nav {
-    background-color: rgba(255, 255, 255, 0.9);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(10px);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    transform: translateX(100%);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.5s ease-in;
-
-    /* Hide navigation */
-    /* Allow NO transitions at all */
-    /* display: none; */
-
-    /* 1) Hide it visually */
-    opacity: 0;
-
-    /* 2) Make it unaccessible to mouse and keyboard */
-    pointer-events: none;
-
-    /* 3) Hide it from screen readers */
-    visibility: hidden;
+  .footer-link:link {
+    font-size: 1.4rem;
   }
 
-  .nav-open .main-nav {
-    opacity: 1;
-    pointer-events: auto;
-    visibility: visible;
-    transform: translateX(0);
+  .copyright-col {
+    grid-column: 1 / -1;
+    justify-self: center;
+    text-align: center;
   }
+}
 
-  .nav-open .icon-mobile-nav[name="close-outline"] {
-    display: block;
-  }
+/* MOBILE NAVIGATION */
+.btn-mobile-nav {
+  display: block;
+  z-index: 9999;
+}
 
-  .nav-open .icon-mobile-nav[name="menu-outline"] {
-    display: none;
-  }
+.main-nav {
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateX(100%);
 
-  .main-nav-list {
-    flex-direction: column;
-    gap: 4.8rem;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in;
 
-  .main-nav-link:link,
-  .main-nav-link:visited {
-    font-size: 3rem;
-  }
+  /* Hide navigation */
+  /* Allow NO transitions at all */
+  /* display: none; */
+
+  /* 1) Hide it visually */
+  opacity: 0;
+
+  /* 2) Make it unaccessible to mouse and keyboard */
+  pointer-events: none;
+
+  /* 3) Hide it from screen readers */
+  visibility: hidden;
+}
+
+.nav-open .main-nav {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.nav-open .icon-mobile-nav[name="close-outline"] {
+  display: block;
+}
+
+.nav-open .icon-mobile-nav[name="menu-outline"] {
+  display: none;
+}
+
+.main-nav-list {
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  font-size: 3rem;
 }
 
 /* ******************** */
@@ -141,8 +161,9 @@ Instead, 1rem = 1em = 16px */
 /* ******************** */
 
 @media (max-width: 34rem) {
-  grid {
+  .grid {
     row-gap: 4.8rem;
+    column-gap: 2.4rem;
   }
 
   .grid--2-cols,
@@ -152,7 +173,7 @@ Instead, 1rem = 1em = 16px */
   }
 
   .section-hero {
-    padding: 2.4rem 0 6.4rem 0;
+    padding: 2.4rem 2.4rem 6.4rem 2.4rem;
   }
 
   .hero {
@@ -167,25 +188,37 @@ Instead, 1rem = 1em = 16px */
     height: 1.2rem;
   }
 
-  .step-img-box:nth-child(2) {
-    grid-row: 1;
+  .about-box {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4.8rem;
   }
 
-  .step-img-box:nth-child(6) {
-    grid-row: 5;
+  .heading-secondary {
+    text-align: center;
   }
 
-  .step-img-box {
-    transform: translateY(2.4rem);
-  }
-
-  .testimonials {
+  .text-container {
+    display: grid;
     grid-template-columns: 1fr;
   }
 
-  .gallery {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.2rem;
+  .logo-container img {
+    width: auto;
+    height: 5rem;
+  }
+
+  .img-box {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 2;
+    row-gap: 2.4rem;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .grid--footer {
+    grid-template-columns: 1fr;
   }
 }
 
