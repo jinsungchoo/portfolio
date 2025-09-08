@@ -93,11 +93,6 @@ Instead, 1rem = 1em = 16px */
     justify-self: center;
     text-align: center;
   }
-
-  .project-img img {
-    width: 90rem;
-    height: auto;
-  }
 }
 
 /* MOBILE NAVIGATION */
@@ -224,11 +219,6 @@ Instead, 1rem = 1em = 16px */
 
   .grid--footer {
     grid-template-columns: 1fr;
-  }
-
-  .project-img img {
-    width: 50rem;
-    height: auto;
   }
 }
 
