@@ -109,6 +109,8 @@
   background-image: url("../img/hero-background.jpg");
   background-size: cover;
   margin-bottom: 6.4rem;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .hero-img {
@@ -193,7 +195,7 @@
 .img-box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 2;
+  grid-template-rows: repeat(2, auto);
   row-gap: 2.4rem;
   justify-items: center;
   align-items: center;
@@ -204,8 +206,10 @@
 }
 
 .project-box img {
-  width: 55rem;
+  width: 100%;
   height: auto;
+  display: block;
+  margin: 0 auto;
   transition: all 0.4s;
 }
 
@@ -258,4 +262,48 @@
 .footer-link:hover,
 .footer-link:active {
   color: #555;
+}
+
+/* ========================= */
+/* HEADER & HERO FIXES       */
+/* ========================= */
+
+/* Hero 섹션 */
+.section-hero {
+  width: 100%; /* 100vw 대신 100% */
+  overflow-x: hidden; /* 배경이 넘치지 않도록 */
+  background-image: url("../img/hero-background.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 6.4rem;
+}
+
+/* Hero 안쪽 박스는 가운데 정렬 유지 */
+.hero-box {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 20rem 0 16rem 0;
+  text-align: center;
+}
+
+/* Header */
+.header {
+  width: 100%; /* 100vw 대신 100% */
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box; /* padding 포함 폭 계산 */
+}
+
+/* 모바일 네비게이션 */
+.main-nav {
+  max-width: 100%; /* 뷰포트 밖으로 안 나가도록 */
+  box-sizing: border-box;
+}
+
+/* 모바일에서 가로 흔들림 차단 */
+@media (max-width: 59em) {
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
 }
