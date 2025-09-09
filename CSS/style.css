@@ -270,8 +270,8 @@
 
 /* Hero 섹션 */
 .section-hero {
-  width: 100%; /* 100vw 대신 100% */
-  overflow-x: hidden; /* 배경이 넘치지 않도록 */
+  width: 100%; 
+  overflow-x: hidden; 
   background-image: url("../img/hero-background.jpg");
   background-size: cover;
   background-position: center;
@@ -288,7 +288,7 @@
 
 /* Header */
 .header {
-  width: 100%; /* 100vw 대신 100% */
+  width: 100%; 
   max-width: 100%;
   overflow-x: hidden;
   box-sizing: border-box; /* padding 포함 폭 계산 */
@@ -296,14 +296,15 @@
 
 /* 모바일 네비게이션 */
 .main-nav {
-  max-width: 100%; /* 뷰포트 밖으로 안 나가도록 */
+  max-width: 100%; 
   box-sizing: border-box;
 }
 
-/* 모바일에서 가로 흔들림 차단 */
+/* 모바일 */
 @media (max-width: 59em) {
   html,
   body {
     overflow-x: hidden !important;
   }
 }
+
