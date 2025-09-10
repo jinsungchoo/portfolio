@@ -10,7 +10,10 @@
   /* Because we want header to be sticky later */
   height: 9.6rem;
   width: 100%;
+  max-width: 100%;
   padding: 0 4.8rem;
+
+  box-sizing: border-box;
 
   z-index: 100;
 
@@ -198,4 +201,24 @@
 .footer-link:hover,
 .footer-link:active {
   color: #555;
+}
+
+/* 뷰포트보다 넓어지는 현상 방지 */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* nav가 뷰포트 넘어가지 않도록 */
+.main-nav {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* hero 배경도 안전하게 */
+.section-hero {
+  max-width: 100%;
+  overflow-x: hidden;
 }
