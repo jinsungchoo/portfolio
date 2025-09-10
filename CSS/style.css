@@ -172,14 +172,33 @@
   grid-row: 2 / 3;
 }
 
-.logo-container {
+/* .logo-container {
   display: flex;
   gap: 0.8rem;
+  margin: 2.4rem auto;
+  width: 6rem;
 }
 
 .logo-container img {
-  width: auto;
-  height: 8rem;
+  width: 100%;
+  height: auto%;
+} */
+
+.logo-container {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr)); /* 7개 고정 */
+  gap: 0.8rem; /* 간격 고정 */
+  justify-content: start; /* 왼쪽 정렬 */
+  margin: 2.4rem auto;
+  max-width: 60rem;
+}
+
+.logo-container img {
+  width: 100%; /* 셀 안에서 꽉 차게 */
+
+  height: auto; /* 비율 유지 */
+  object-fit: contain;
+  display: block;
 }
 
 /* ******************** */
